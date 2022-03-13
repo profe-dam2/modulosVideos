@@ -28,7 +28,7 @@
                             </thead>
 
                             <tbody>
-                                <t t-foreach="proyecto.empleado_ids" t-as="empleado">
+                                <t t-foreach="proyecto.empleado_id" t-as="empleado">
                                     <tr>
                                         <td>
                                             <span t-field="empleado.dniEmpleado"/>
