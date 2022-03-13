@@ -12,10 +12,53 @@
 
     <template id="departamento_report_view">
         <t t-call="web.html_container">
-            <t t-foreach="docs" t-as="o">
+            <t t-foreach="docs" t-as="departamento">
                 <t t-call="web.external_layout">
                     <div class="page">
-                        <h2>Report title</h2>
+                        <h2>INFORME</h2>
+                        <h3 t-field="departamento.nombreDpto" />
+                        <table class="table table-sm o_main_table">
+                            <thead>
+                                <tr>
+                                    <th>DNI</th>
+                                    <th>Nombre</th>
+                                    <th>Fecha de nacimiento</th>
+                                    <th>Edad</th>
+                                    <th>Direccion</th>
+                                    <th>Telefono</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="departamento.empleado_id" t-as="empleado">
+                                    <tr>
+                                        <td>
+                                            <span t-field="empleado.dniEmpleado"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-field="empleado.nombreEmpleado"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-field="empleado.fechaNacimiento"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-field="empleado.edad"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-field="empleado.direccionEmpleado"/>
+                                        </td>
+
+                                        <td>
+                                            <span t-field="empleado.telefonoEmpleado"/>
+                                        </td>
+                                        
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
                     </div>
                 </t>
             </t>
