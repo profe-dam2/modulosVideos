@@ -42,11 +42,32 @@ class empleado(models.Model):
     fechaNacimiento = fields.Date(string='Fecha Nacimiento', required=True, default = fields.date.today())
     direccionEmpleado = fields.Char(string='Direccon')
     telefonoEmpleado = fields.Char(string='Telefono')
+    edad = fields.Integer('Edad', compute='_getEdad')
 
     #Relacion de tablas
     departamento_id = fields.Many2one('proyectos.departamento', string='Empleados')
     proyecto_ids = fields.Many2many('proyectos.proyecto', string='Proyectos')
 
+
+    @api.depends('fechaNacimiento')
+    def _getEdad(self):
+        hoy = date.today()
+        for empleado in self:
+            empleado.edad = relativedelta(hoy, empleado.fechaNacimiento).years
+
+    @api.constrains('fechaNacimiento')
+    def _checkEdad(self):
+        for empleado in self:
+            if (empleado.edad < 18):
+                raise exceptions.ValidationError("El empleado no puede ser menor de edad")
+    
+    @api.constrains('dniEmpleado')
+    def _checkDNI(self):
+        for empleado in self:
+            if (len(empleado.dniEmpleado) > 9):
+                raise exceptions.ValidationError("El DNI no puede tener mas 9 caracteres")
+            if (len(empleado.dniEmpleado) < 9):
+                raise exceptions.ValidationError("El DNI no puede tener menos 9 caracteres")
 
 class proyecto(models.Model):
      _name = 'proyectos.proyecto'
