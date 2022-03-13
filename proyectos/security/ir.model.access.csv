@@ -1,5 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_proyectos_empleado_role1,proyectos.empleado.role1,model_proyectos_empleado,base.group_proyectos_role1,1,1,1,1
-access_proyectos_departamento_role1,proyectos.departamento.role1,model_proyectos_departamento,base.group_proyectos_role1,1,1,1,1
-access_proyectos_proyecto_role1,proyectos.proyecto.role1,model_proyectos_proyecto,base.group_proyectos_role1,1,0,0,0
-access_proyectos_proyecto_role2,proyectos.proyecto.role2,model_proyectos_proyecto,base.group_proyectos_role2,1,1,1,1
+access_proyectos_empleado_role1,proyectos.empleado.role1,model_proyectos_empleado,proyectos.group_proyectos_role1,1,1,1,1
+access_proyectos_departamento_role1,proyectos.departamento.role1,model_proyectos_departamento,proyectos.group_proyectos_role1,1,1,1,1
+access_proyectos_proyecto_role1,proyectos.proyecto.role1,model_proyectos_proyecto,proyectos.group_proyectos_role1,1,0,0,0
+access_proyectos_proyecto_role2,proyectos.proyecto.role2,model_proyectos_proyecto,proyectos.group_proyectos_role2,1,1,1,1
