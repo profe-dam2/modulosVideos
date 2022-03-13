@@ -20,6 +20,7 @@
 
 from odoo import models, fields, api, exceptions
 from dateutil.relativedelta import *
+from datetime import date
 
 class departamento(models.Model):
     _name = 'proyectos.departamento'
