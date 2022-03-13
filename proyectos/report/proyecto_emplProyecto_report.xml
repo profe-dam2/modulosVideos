@@ -15,6 +15,9 @@
                 <t t-call="web.external_layout">
                     <div class="page">
                         <h2>INFORME</h2>
+                        <h3 t-field="proyecto.nombreProyecto"/>
+                        <h4>Descripcion </h4>
+                        <h4 t-field="proyecto.descripcionProyecto"/>
                         <table class="table table-sm o_main_table">
                             <thead>
                                 <tr>
