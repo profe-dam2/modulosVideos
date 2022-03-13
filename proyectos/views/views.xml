@@ -98,10 +98,14 @@
                       <field name="nombreEmpleado" style="width:170%%"/>
                     </group>
                   </group>
-                  <group col="3">
+                  
+                  <group col="2">
                     <group>
                       <field name="direccionEmpleado"/>
                     </group>
+                  </group>
+
+                  <group col="3">
                     <group>
                       <field name="fechaNacimiento"/>
                     </group>
