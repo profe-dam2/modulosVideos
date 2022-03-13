@@ -57,15 +57,15 @@ class proyecto(models.Model):
      descripcionProyecto = fields.Text(string='Descripcion del proyecto')
      fechaInicio = fields.Date(string='Fecha de inicio', required=True)
      fechaFin = fields.Date(string='Fecha de fin', required=True)
-     dias = fields.Integer(string='Dias')
+     dias = fields.Integer()
      #Relacion entre tablas
      empleado_id = fields.Many2many('proyectos.empleado', string='Empleados')
-     
-     
+
      @api.constrains('fechaInicio')
      def _checkFechaInicio(self):
          hoy = date.today()
          for proyecto in self:
              proyecto.dias = relativedelta(hoy, proyecto.fechaInicio).days
              if (proyecto.dias > 0):
-                 raise exceptions.ValidationError("La fecha de inicio no puede ser inferior a la fecha actual")
+                 raise exceptions.ValidationError("La fecha no puede ser anterior a la fecha actual")
+
