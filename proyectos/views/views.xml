@@ -78,16 +78,14 @@
       <field name="model">proyectos.empleado</field>
       <field name="arch" type="xml">
         <form>
-          <header>
-            <field name="state" widget="statusbar"/>
-          </header>
+         
           <sheet>
             <div class="oe_button_box">
               <BUTTONS/>
             </div>
             <group>
               <group>
-                <field name="fname"/>
+                
               </group>
             </group>
             <notebook>
