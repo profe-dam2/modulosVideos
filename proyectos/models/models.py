@@ -55,7 +55,7 @@ class proyecto(models.Model):
      nombreProyecto = fields.Char(string='Nombre proyecto', required=True)
      tipoProyecto = fields.Selection(string='Tipo de poryecto', selection=[('f','Front-End'),('b','Back-End')], help='Tipo de proyecto al que se esta destinando' )
      descripcionProyecto = fields.Text(string='Descripcion del proyecto')
-     fechaInicio = fields.Date(string='Fecha de inicio', required=True)
+     fechaInicio = fields.Date(string='Fecha de Inicio', required=True)
      fechaFin = fields.Date(string='Fecha de fin', required=True)
      dias = fields.Integer(string="dias")
      #Relacion entre tablas
