@@ -36,6 +36,7 @@ class departamento(models.Model):
         listaDptos = []
         for dpto in self:
             listaDptos.append(dpto.id, dpto.nombreDpto)
+        return listaDptos
 
 class empleado(models.Model):
     _name = 'proyectos.empleado'
