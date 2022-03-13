@@ -56,7 +56,7 @@
     <menuitem name="Server to list" id="proyectos" parent="proyectos.menu_2"
               action="proyectos.action_server"/>
 -->
-    <!-- VISTA EMPLEADOS -->
+    <!-- VISTA EMPLEADOS TREE -->
     <record model="ir.ui.view" id="proyectos.empleado_list_view">
       <field name="name">proyectos.empleado.view.tree</field>
       <field name="model">proyectos.empleado</field>
@@ -70,6 +70,46 @@
         </tree>
       </field>
     </record>
+
+
+     <!-- VISTA EMPLEADOS FORMULARIO -->
+    <record model="ir.ui.view" id="proyectos.empleado__view">
+      <field name="name">proyectos.empleado.view</field>
+      <field name="model">proyectos.empleado</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+            <field name="state" widget="statusbar"/>
+          </header>
+          <sheet>
+            <div class="oe_button_box">
+              <BUTTONS/>
+            </div>
+            <group>
+              <group>
+                <field name="fname"/>
+              </group>
+            </group>
+            <notebook>
+              <page string="Page1">
+                <group>
+                  <CONTENT/>
+                </group>
+              </page>
+              <page string="Page2">
+                <group>
+                  <CONTENT/>
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+
+
 
     <!-- VISTA DEPARTAMENTO -->
     <record model="ir.ui.view" id="proyectos.departamento_list_view">
