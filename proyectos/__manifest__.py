@@ -28,6 +28,7 @@
         'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'report/proyecto_empleados_report.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
