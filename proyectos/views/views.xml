@@ -97,9 +97,7 @@
                     <group>
                       <field name="nombreEmpleado"/>
                     </group>
-                    <group>
-                      <field name="fechaNacimiento"/>
-                    </group>
+                    
                   </group>
                 </group>
               </page>
