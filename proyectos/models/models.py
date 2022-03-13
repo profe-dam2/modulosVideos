@@ -32,6 +32,11 @@ class departamento(models.Model):
     #Relacion entre tablas
     empleado_id = fields.One2many('proyectos.empleado','departamento_id', string='Departamento')
 
+    def name_get(self):
+        listaDptos = []
+        for dpto in self:
+            listaDptos.append(dpto.id, dpto.nombreDpto)
+
 class empleado(models.Model):
     _name = 'proyectos.empleado'
     _description = 'Define los atributos de un empleado'
@@ -45,7 +50,7 @@ class empleado(models.Model):
     edad = fields.Integer('Edad', compute='_getEdad')
 
     #Relacion de tablas
-    departamento_id = fields.Many2one('proyectos.departamento', string='Empleados')
+    departamento_id = fields.Many2one('proyectos.departamento', string='Departamento')
     proyecto_ids = fields.Many2many('proyectos.proyecto', string='Proyectos')
 
 
