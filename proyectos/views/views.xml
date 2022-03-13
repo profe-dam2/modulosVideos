@@ -85,13 +85,14 @@
             </div>
             <group>
               <group>
-                
+                <h1>VISTA EMPLEADOS</h1>
               </group>
             </group>
             <notebook>
               <page string="Page1">
-                <group>
-                  <CONTENT/>
+                <group col="2">
+                  <field name="dniEmpleado" style="width:30%%"/>
+                  <field name="nombreEmpleado"/> 
                 </group>
               </page>
               <page string="Page2">
