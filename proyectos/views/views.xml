@@ -90,7 +90,7 @@
             </group>
             <notebook>
               <page string="Page1">
-                <group col="2">
+                <group>
                   <field name="dniEmpleado" style="width:30%%"/>
                   <field name="nombreEmpleado"/> 
                 </group>
