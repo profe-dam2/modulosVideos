@@ -72,13 +72,12 @@
     </record>
 
 
-     <!-- VISTA EMPLEADOS FORMULARIO -->
-    <record model="ir.ui.view" id="proyectos.empleado__view">
+    <!-- VISTA EMPLEADOS FORMULARIO -->
+    <record model="ir.ui.view" id="proyectos.empleado_view">
       <field name="name">proyectos.empleado.view</field>
       <field name="model">proyectos.empleado</field>
       <field name="arch" type="xml">
         <form>
-         
           <sheet>
             <div class="oe_button_box">
               <BUTTONS/>
@@ -91,9 +90,7 @@
             <notebook>
               <page string="Page1">
                 <group>
-                  <group>
-                  <field name="dniEmpleado" style="width:30%%"/>
-                  <field name="nombreEmpleado"/> 
+                  <CONTENT/>
                 </group>
               </page>
               <page string="Page2">
@@ -106,7 +103,6 @@
         </form>
       </field>
     </record>
-
 
 
 
